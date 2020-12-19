@@ -3,32 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Rock Paper Scissors Game</title>
+  <script src="script.js" defer></script>   
 </head>
 <body>
 
+<div class="container"></div>
+<header>
+  <h1>
+    <span>Rock</span>
+    <span>Paper</span>
+    <span>Scissors</span>
+  </h1>
+  <div class="score-container">
+    <h3>score</h3>
+    <p id="score">0</p>
+  </div>
+</header>
 
-  
+<main id="main">
+  <button class="btn-circle btn-paper pick" data-choice="paper">
+    <span class="wrapper">
+    <img src="./images/icon-paper.svg" alt="paper-icon"/>
+  </span>
+</button>
 
+  <button class="btn-circle btn-rock pick" data-choice="rock"><span class="wrapper"><img src="./images/icon-rock.svg" alt="rock-icon"/>
+  </span>
+</button>
+
+  <button class="btn-circle btn-scissors pick" data-choice="scissors" >
+    <span class="wrapper"><img src="./images/icon-scissors.svg" alt="scissors"/>
+    </span>
+  </button>
+
+  <button class="btn-circle btn-lizard pick" data-choice="lizard">
+    <span class="wrapper">
+    <img src="./images/icon-lizard.svg" alt="lizard-icon"/>
+  </span>
+</button>
+
+<button class="btn-circle btn-spock pick" data-choice="spock">
+  <span class="wrapper">
+  <img src="./images/icon-spock.svg" alt="spock-icon"/>
+</span>
+</button>
+</main>
+
+
+<!--Rules-->
+<div class="rules-modal" id="modal">
+  <img src= './images/image-rules.svg' alt="rules"/>
+     <button id="close"><img src="./images/icon-close.svg" alt="close"></button>
+</div>
+</div>
+<button class="btn-rules" id="open">Rules</button>
+</div>
+
+
+<!--Results-->
+<div class="selection" id="selection">
+<div>
+<h2>You Picked</h2>
+<button class="btn-circle btn-paper" id="user_select" >
+<span class="wrapper">
+<img src="./images/icon-paper.svg" alt="paper-icon"/>
+</span>
+</button>   
+</div>
+
+<div>
+<div class="go-down"></div>
+<p class="big-text"> You <span id="winner">Won</span> </p>
+<button class="btn" id="reset">Play Again?</button>
+</div>
+<div>
+<h2>The House Picked</h2>
+<button class="btn-circle btn-rock id="computer_select" >
+<span class="wrapper">
+<img src="./images/icon-rock.svg" alt="rock-icon"/>
+</span>
+</button>   
+</div>
+
+<div></div>
 </body>
 </html>
